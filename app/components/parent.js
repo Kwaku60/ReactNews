@@ -79,26 +79,26 @@ var Parent = React.createClass({
     return (
       <div className="container">
         <div className="row">
-          <div className="jumbotron">
+          <div className="row header">
             <h2>React News</h2>
             <p><em>Speed is on our side</em></p>
 
             <p>
               
-              <button className="btn btn-primary btn-lg" onClick={this.handleClick}>Shift Theme</button>
+              <button className=" btn-md theme-btn" onClick={this.handleClick}>Shift Theme</button>
             
-              <button className="btn btn-danger btn-lg" onClick={this.resetClick}>Reset</button>
+              <button className=" theme-btn" onClick={this.resetClick}>Reset</button>
             </p>
 
           </div>
 
           <div className="col-md-5">
 
-            <div className="panel panel-default">
-              <div className="panel-heading">
+            <div className="panel panel-default count-div">
+              <div>
                 <h3 className="panel-title text-center"></h3>
               </div>
-              <div className="panel-body text-center">
+              <div className="panel-body text-center click-count-div">
 
    
                 <h1 className="col-md-3" >{this.state.clicks}</h1>
