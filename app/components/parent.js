@@ -31,10 +31,56 @@ var Parent = React.createClass({
   // If the component changes- if a search is entered
   componentDidUpdate: function() {
 
-    // Run the query for the address
+    // Run the query for the article
     helpers.runQuery(this.state.searchTerm).then(function(data) {
       if (data !== this.state.results) {
-        console.log("Address", data);
+        console.log("Results", data);
+
+
+   var resultArray = data.map(function(item, i){
+                var title = item.headline.main;
+                var date = (item.pub_date) ? item.pub_date : 'Unavailable Date';
+                var abstract = item.snippet;
+                var url = item.web_url
+                // ====
+//**cannot simply return it this way. consider creating another component which will contain these values and render them**
+                // ====
+                return( 
+              <div class="col-md-4">
+              <h4>{title}</h4>
+              <p class ="article-date">{date}</p>
+              <p>{abstract}</p>
+              <a class="btn btn-default text-info" href={url} target= "_blank">More info...</a>
+              </div>
+                )
+                  
+                  // title,
+                  // published_date,
+                  // abstract,
+                  // url,
+                // };
+
+      });
+
+
+
+
+
+
+/*
+        var resultArray = articles.map(function(article,i){
+          return(
+            <div class="col-md-4">
+              <h4>{title}</h4>
+              <p class ="article-date">{date}</p>
+              <p>{abstract}</p>
+              <a class="btn btn-default text-info" href={url} target= "_blank">More info...</a>
+              </div>
+
+          ) ;
+        });*/
+        this.state.results = resultArray; 
+        
         this.setState({ results: data });
 
         // After getting the result... then post the search term to  history.

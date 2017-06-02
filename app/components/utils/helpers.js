@@ -15,6 +15,7 @@ var helper = {
   runQuery: function(searchTerm) {
 
     console.log(searchTerm);
+     searchTerm = searchTerm.replace(/\s/g, '+');
 
 
     var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" +  authKey + "&q=" + searchTerm;
@@ -22,11 +23,31 @@ var helper = {
     return axios.get(queryURL).then(function(response) {
       // If get get a result, return that result
       //**find a way to return the entire array of search results */
-      if (response.data) {
-        return response.data.response.docs[0].headline.main;
-      }
-      // no results, return this string
-      return "Nothing Found";
+
+      var data = response.data.response.docs;
+      console.log(data);
+
+      return data;
+      // data = data.map(function(item, i){
+      //           var title = item.headline.main;
+      //           var published_date = (item.pub_date) ? item.pub_date : 'Unavailable Date';
+      //           var abstract = item.snippet;
+      //           var url = item.web_url
+
+      //           return{
+      //             title,
+      //             published_date,
+      //             abstract,
+      //             url,
+      //           };
+
+      // });
+
+      // if (response.data) {
+      //   return response.data.response.docs[0].headline.main;
+      // }
+      // // no results, return this string
+      // return "Nothing Found";
     });
   },
 
