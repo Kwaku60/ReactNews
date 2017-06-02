@@ -1,0 +1,73 @@
+.theme-btn{
+
+    width:50px;
+    height:29px;
+    background-color: midnightblue;
+    border: solid orangered 1px;
+    margin-left: 15px;
+    border-radius: 12px;
+    font-size: 9px;
+    color: white;
+}
+
+.header{
+
+    background-color: midnightblue;
+    color: orangered;
+
+}
+
+.click-count-div{
+
+
+ 
+    color: orange;
+
+}
+
+.count-div{
+
+    margin-left:190px;
+    width: 100px;
+    height:70px;
+    font-size: 10px;
+    
+}
+
+.search-heading{
+
+    color: midnightblue;
+    font-size: 11px;
+}
+
+.search-btn{
+    color: orangered;
+    background-color: MidnightBlue;
+}
+
+
+
+#term{
+
+width: 220px;
+border: solid midnightblue 3px;
+border-radius: 10px;
+margin-left: 156px;
+color: orangered;
+}
+
+#results-well{
+
+    border: solid khaki 3px;
+    border-radius: 6px;
+    background-color: khaki;
+     height: 400px;
+     width: 1100px;
+         margin-top: 70px;
+    overflow:scroll;
+}
+
+.results{
+
+   
+}

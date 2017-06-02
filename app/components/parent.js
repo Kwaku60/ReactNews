@@ -91,42 +91,35 @@ var Parent = React.createClass({
             </p>
 
           </div>
+<div className = "col-md-2">
+<h1 className="col-md-1" >{this.state.clicks}</h1>
+  </div>
+    </div>
+       
 
-          <div className="col-md-5">
 
-            <div className="panel panel-default count-div">
-              <div>
-                <h3 className="panel-title text-center"></h3>
-              </div>
-              <div className="panel-body text-center click-count-div">
-
-   
-                <h1 className="col-md-3" >{this.state.clicks}</h1>
-              </div>
-            </div>
-          </div>
-
-        </div>
+    
 
 
 
-<div className="col-md-6">
+          <div className="col-md-6">
 
             <Form setTerm={this.setTerm} />
-   </div>         
-
+   </div>  
 
  <div className="col-md-6">
-
-            <Results articles={this.state.results} />
-
-          </div>
-
- <div className="row">
 
           <History history={this.state.history} />
 
         </div>
+
+
+
+         <div className="row">
+
+            <Results articles={this.state.results} />
+
+          </div>
         </div>
 
 

@@ -28,28 +28,26 @@ var Form = React.createClass({
   // component's render method
   render: function() {
     return (
-      <div className="panel panel-default">
-        <div className="panel-heading">
-          <h3 className="panel-title text-center">Query</h3>
-        </div>
-        <div className="panel-body text-center">
+      <div>
+      
+        <div className="text-center">
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <h4 className="">
-                <strong>Location</strong>
+              <h4 className="search-heading">
+                <strong>Article Search</strong>
               </h4>
              
               <input
                 value={this.state.term}
                 type="text"
-                className="form-control text-center"
+                className="form-control text-center search-input"
                 id="term"
                 onChange={this.handleChange}
                 required
               />
               <br />
               <button
-                className="btn btn-primary"
+                className="btn search-btn"
                 type="submit"
               >
                 Submit
