@@ -6,9 +6,9 @@ var History = React.createClass({
   //component's render method
   render: function() {
     return (
-      <div className="panel panel-default">
-        <div className="panel-heading">
-          <h3 className="panel-title text-center">Search History</h3>
+      <div className="history-container">
+        <div>
+          <h3 className="text-center history-heading">Previous Searches:</h3>
         </div>
         <div className="panel-body text-center">
 

@@ -28,7 +28,7 @@ var Form = React.createClass({
   // component's render method
   render: function() {
     return (
-      <div>
+      <div className="search-form">
       
         <div className="text-center">
           <form onSubmit={this.handleSubmit}>
@@ -50,7 +50,7 @@ var Form = React.createClass({
                 className="btn search-btn"
                 type="submit"
               >
-                Submit
+                Find
               </button>
             </div>
           </form>

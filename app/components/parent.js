@@ -5,7 +5,8 @@ var React = require("react");
 var Form = require("./children/Form");
 var Results = require("./children/Results");
 var History = require("./children/History");
-
+var Article = require("./children/Article");
+var ArticleResults = require("./utils/helpers");
 // Helper for making AJAX requests to our API
 var helpers = require("./utils/helpers");
 
@@ -32,54 +33,86 @@ var Parent = React.createClass({
   componentDidUpdate: function() {
 
     // Run the query for the article
-    helpers.runQuery(this.state.searchTerm).then(function(data) {
-      if (data !== this.state.results) {
+    helpers.runQuery(this.state.searchTerm).then(function(response) {
+
+     
+ 
+    
+    
+ 
+      // If get get a result, return that result
+      //**find a way to return the entire array of search results */
+
+      var data = response.data.response.docs;
+      console.log(data);
+
+      data = data.map(function(item, i){
+                var title = item.headline.main;
+                console.log(title);
+                var date = (item.pub_date) ? item.pub_date : 'Unavailable Date';
+
+                var abstract = item.snippet;
+                console.log(abstract);
+
+                var url = item.web_url;
+         console.log(url);
+
         console.log("Results", data);
 
 
-   var resultArray = data.map(function(item, i){
-                var title = item.headline.main;
-                var date = (item.pub_date) ? item.pub_date : 'Unavailable Date';
-                var abstract = item.snippet;
-                var url = item.web_url
-                // ====
-//**cannot simply return it this way. consider creating another component which will contain these values and render them**
-                // ====
-                return( 
-              <div class="col-md-4">
+data.map(function(data, i) {
+             <div class="col-md-4">
               <h4>{title}</h4>
               <p class ="article-date">{date}</p>
               <p>{abstract}</p>
               <a class="btn btn-default text-info" href={url} target= "_blank">More info...</a>
               </div>
-                )
-                  
-                  // title,
-                  // published_date,
-                  // abstract,
-                  // url,
-                // };
+        });
 
-      });
+
+
+        })
 
 
 
 
+      
+    
+
+      // if (response.data) {
+      //   return response.data.response.docs[0].headline.main;
+      // }
+      // // no results, return this string
+      // return "Nothing Found";
+   
 
 
-/*
-        var resultArray = articles.map(function(article,i){
-          return(
-            <div class="col-md-4">
-              <h4>{title}</h4>
-              <p class ="article-date">{date}</p>
-              <p>{abstract}</p>
-              <a class="btn btn-default text-info" href={url} target= "_blank">More info...</a>
-              </div>
 
-          ) ;
-        });*/
-        this.state.results = resultArray; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//data is undefined
+
+// var { articles } = this.state;
+
+    
+
+
+
+
+        // this.state.results = resultArray; 
         
         this.setState({ results: data });
 
@@ -97,7 +130,7 @@ var Parent = React.createClass({
 
           }.bind(this));
         }.bind(this));
-      }
+      
     }.bind(this));
   },
   // This function allows childrens to update the parent.
@@ -137,6 +170,8 @@ var Parent = React.createClass({
             </p>
 
           </div>
+
+          <div className=" row border-block" > </div>
 <div className = "col-md-2">
 <h1 className="col-md-1" >{this.state.clicks}</h1>
   </div>
@@ -146,12 +181,9 @@ var Parent = React.createClass({
 
     
 
+<div className="row">
 
-
-          <div className="col-md-6">
-
-            <Form setTerm={this.setTerm} />
-   </div>  
+          
 
  <div className="col-md-6">
 
@@ -159,9 +191,16 @@ var Parent = React.createClass({
 
         </div>
 
+        <div className="col-md-6">
+
+            <Form setTerm={this.setTerm} />
+   </div>  
+
+        </div>
 
 
-         <div className="row">
+
+         <div className="col-md-6">
 
             <Results articles={this.state.results} />
 

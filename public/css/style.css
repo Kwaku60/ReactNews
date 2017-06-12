@@ -1,3 +1,18 @@
+
+#body-background{
+
+    background-color: rgba(255,255,0,.2);
+}
+
+
+.border-block{
+
+    width: 1200px;
+    height: 10px;
+    background-color: khaki;
+
+}
+
 .theme-btn{
 
     width:50px;
@@ -36,38 +51,73 @@
 
 .search-heading{
 
-    color: midnightblue;
-    font-size: 11px;
+    color: rgba(250,69,0,.90);
+    font-size: 14px;
+
 }
 
 .search-btn{
-    color: orangered;
-    background-color: MidnightBlue;
+        color: rgba(250,69,0,.90);
+    background-color: rgba(25,25,112, .65);
+    margin-top: 0px;
 }
 
+
+.search-form{
+
+    background-color: rgba(25,25,112, .45);
+    width:500px;
+    border: solid rgba(250,69,0,.90) 1.5px;
+    margin-left: 30px;
+    border-radius: 6px;
+}
 
 
 #term{
 
-width: 220px;
-border: solid midnightblue 3px;
+width: 230px;
+border: solid rgba(250,69,0,.90) 3px;
 border-radius: 10px;
-margin-left: 156px;
+margin-left: 132px;
+margin-top: 15px;
 color: orangered;
+}
+
+.history-heading{
+
+    color:rgba(250,69,0,.90);
+    font-size: 15px;
+   position: relative;
+   bottom:14px;
+    height:30px;
+}
+
+.history-container{
+
+    background-color: rgba(25,25,112, .45);
+    border: solid  rgba(250,69,0,.90) 2px;
+    width:420px;
+    height:210px;
+        border-radius: 6px;
+    overflow: scroll;
 }
 
 #results-well{
 
-    border: solid khaki 3px;
+    border: solid rgba(139,69, 19, .6) 4.25px;
     border-radius: 6px;
-    background-color: khaki;
+    background-color: rgba(250,69,0,.95);
      height: 400px;
      width: 1100px;
          margin-top: 70px;
     overflow:scroll;
+    color: saddleBrown;
+    font-size: 24px;
 }
 
-.results{
+.article-hold{
+    background-color: smokewhite;
+            
 
    
 }

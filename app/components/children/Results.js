@@ -13,7 +13,9 @@ var Results = React.createClass({
 
     
         <div className="panel-body text-center results" id="results-well" > Results
-          <p>{this.props.articles}</p>
+        
+          <p className="article-hold">{this.props.articles}</p>
+ 
         </div>
 
 
