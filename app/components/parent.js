@@ -6,7 +6,7 @@ var Form = require("./children/Form");
 var Results = require("./children/Results");
 var History = require("./children/History");
 var Article = require("./children/Article");
-var ArticleResults = require("./utils/helpers");
+// var ArticleResults = require("./utils/helpers");
 // Helper for making AJAX requests to our API
 var helpers = require("./utils/helpers");
 
@@ -14,8 +14,18 @@ var Parent = React.createClass({
 
 
   getInitialState: function() {
-    return { searchTerm: "", results: "", history: [] };
+    return { searchTerm: "", results: [], history: [] };
   },
+
+  
+
+  setResults(results) {
+   this.setState({results: results});
+   console.log(results);
+  
+  },
+  
+
 
   // / The moment the page renders get the History
   componentDidMount: function() {
@@ -46,32 +56,48 @@ var Parent = React.createClass({
       var data = response.data.response.docs;
       console.log(data);
 
-      data = data.map(function(item, i){
-                var title = item.headline.main;
-                console.log(title);
-                var date = (item.pub_date) ? item.pub_date : 'Unavailable Date';
-
-                var abstract = item.snippet;
-                console.log(abstract);
-
-                var url = item.web_url;
-         console.log(url);
-
-        console.log("Results", data);
-
-
-data.map(function(data, i) {
-             <div class="col-md-4">
-              <h4>{title}</h4>
-              <p class ="article-date">{date}</p>
-              <p>{abstract}</p>
-              <a class="btn btn-default text-info" href={url} target= "_blank">More info...</a>
-              </div>
-        });
+          var results = []
+     data.forEach(function(item) {
+                results.push(item)
+            });
+           console.log(results);
+            this.setResults(results);
 
 
 
-        })
+      // data = data.map(function(item, i){
+      //           var title = item.headline.main;
+      //           console.log(title);
+      //           var date = (item.pub_date) ? item.pub_date : 'Unavailable Date';
+
+      //           var abstract = item.snippet;
+      //           console.log(abstract);
+
+      //           var url = item.web_url;
+      //    console.log(url);
+
+      //   console.log("Results", data);
+
+
+
+
+
+
+        
+
+
+// data.map(function(data, i) {
+//              <div class="col-md-4">
+//               <h4>{title}</h4>
+//               <p class ="article-date">{date}</p>
+//               <p>{abstract}</p>
+//               <a class="btn btn-default text-info" href={url} target= "_blank">More info...</a>
+//               </div>
+//         });
+
+
+
+        // })
 
 
 
@@ -114,7 +140,7 @@ data.map(function(data, i) {
 
         // this.state.results = resultArray; 
         
-        this.setState({ results: data });
+        this.setState({ results: results });
 
         // After getting the result... then post the search term to  history.
         helpers.postHistory(this.state.searchTerm).then(function() {
@@ -203,6 +229,7 @@ data.map(function(data, i) {
          <div className="col-md-6">
 
             <Results articles={this.state.results} />
+            
 
           </div>
         </div>
