@@ -51,32 +51,40 @@
 
 .search-heading{
 
-    color: rgba(250,69,0,.90);
+    /*color: rgba(250,69,0,.90);*/
+    color: midnightblue;
     font-size: 14px;
 
 }
 
 .search-btn{
         color: rgba(250,69,0,.90);
-    background-color: rgba(25,25,112, .65);
+    background-color: rgba(25,25,112, .98);
     margin-top: 0px;
 }
 
 
 .search-form{
-
-    background-color: rgba(25,25,112, .45);
+/*
+    background-color: rgba(25,25,112, .45);*/
+    background-color: smokewhite;
     width:500px;
-    border: solid rgba(250,69,0,.90) 1.5px;
+    /*border: solid rgba(250,69,0,.90) 1.5px;*/
+    border-left: solid midnightblue 1.5px;
+      border-right: solid midnightblue 1.5px;
     margin-left: 302px;
     border-radius: 6px;
+    padding-bottom: 10px;
+    padding-left:5.5px;
+    padding-top: 6px;
 }
 
 
 #term{
 
 width: 230px;
-border: solid rgba(250,69,0,.90) 3px;
+/*border: solid rgba(250,69,0,.90) 3px;*/
+border: solid black 2px;
 border-radius: 10px;
 margin-left: 132px;
 margin-top: 15px;
@@ -129,9 +137,11 @@ color: orangered;
     font-size: 11px;
     border-radius: 30px;
     background-color: white;
-    width: 20px;
-    height: 20px;
-    padding: 3px 3px 3px 3px;
+    width: 15px;
+    height: 15px;
+    padding: 1px 1px 1px 1px;
+   position: relative;
+   bottom: 20px;
 
 
 }
@@ -170,7 +180,7 @@ font-size: 15px;
         border-bottom: solid black .3px;
         padding-bottom: 3px;
         width: 400px;
-        margin-left: 307px;
+        margin-left: 337px;
         color: midnightblue;
 }
 
