@@ -11,20 +11,25 @@ var Results = React.createClass({
 
 
 
+
+
+
     
-        <div className="panel-body text-center results" id="results-well" > Results
+        <div className="panel-body text-center results" id="results-well" > 
         
           <p className="article-hold"></p>
 
   {this.props.articles.map((article, i) => (
-              <div key={i} id={"result_"+(i+1)} className="well">
-                <h2><span className="btn btn-primary">{i+1}</span> {article.headline.main}</h2>
-                <p>{article.byline ? article.byline.original : "No Author"}</p>
-                <p>{article.section_name}</p>
-                <p>{article.pub_date}</p>
-                <a href={article.web_url} target="_blank" >{article.web_url}</a>
+              <div key={i} id={"result_"+(i+1)} className="article-headline">
+                <h2><span className="article-count">{i+1}</span> {article.headline.main}</h2>
+                <p className="by-line" >{article.byline ? article.byline.original : "No Author"}</p>
+     
+                <p className="publish-date" >{article.pub_date}</p>
+           
                 <br/>
-                <button className="btn btn-primary">Save Article</button>
+                <p className="snippit">{article.lead_paragraph} </p>
+                     <a className="read-me-link" href={article.web_url} target="_blank" >...read more</a>
+     
               </div>
             ))
           }

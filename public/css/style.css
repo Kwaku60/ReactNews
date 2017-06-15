@@ -1,7 +1,7 @@
 
 #body-background{
 
-    background-color: rgba(255,255,0,.2);
+    background-color: white;
 }
 
 
@@ -68,7 +68,7 @@
     background-color: rgba(25,25,112, .45);
     width:500px;
     border: solid rgba(250,69,0,.90) 1.5px;
-    margin-left: 30px;
+    margin-left: 302px;
     border-radius: 6px;
 }
 
@@ -104,9 +104,9 @@ color: orangered;
 
 #results-well{
 
-    border: solid rgba(139,69, 19, .6) 4.25px;
+    border: solid midnightblue 4.25px;
     border-radius: 6px;
-    background-color: rgba(250,69,0,.95);
+    background-color smokeWhite;
      height: 400px;
      width: 1100px;
          margin-top: 70px;
@@ -115,9 +115,68 @@ color: orangered;
     font-size: 24px;
 }
 
+
+
 .article-hold{
     background-color: smokewhite;
+    overflow:scroll; 
             
+}
 
+.article-count{
+
+    border: solid midnightblue .3px;
+    font-size: 11px;
+    border-radius: 30px;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    padding: 3px 3px 3px 3px;
+
+
+}
+
+.article-headline{
+
+    border-bottom: solid midnightblue .6px;
+    padding-bottom: 9px;
+
+    color: black;
    
+}
+
+
+.snippit{
+
+    font-size: 12px;
+    color: black;
+    margin-top: 0px;
+}
+
+.read-me-link{
+
+width: 90px;
+background-color: whitesmoke;
+
+border-radius: 20px;
+color:midnightblue;
+padding: 5px 5px 5px 5px;
+font-size: 15px;
+}
+
+.by-line{
+
+    font-size: 16px;
+        border-bottom: solid black .3px;
+        padding-bottom: 3px;
+        width: 400px;
+        margin-left: 307px;
+        color: midnightblue;
+}
+
+.publish-date{
+
+    font-size: 8px;
+    color: black;
+    margin-right: 20px;
 }

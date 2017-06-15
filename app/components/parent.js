@@ -65,80 +65,8 @@ var Parent = React.createClass({
 
 
 
-      // data = data.map(function(item, i){
-      //           var title = item.headline.main;
-      //           console.log(title);
-      //           var date = (item.pub_date) ? item.pub_date : 'Unavailable Date';
-
-      //           var abstract = item.snippet;
-      //           console.log(abstract);
-
-      //           var url = item.web_url;
-      //    console.log(url);
-
-      //   console.log("Results", data);
 
 
-
-
-
-
-        
-
-
-// data.map(function(data, i) {
-//              <div class="col-md-4">
-//               <h4>{title}</h4>
-//               <p class ="article-date">{date}</p>
-//               <p>{abstract}</p>
-//               <a class="btn btn-default text-info" href={url} target= "_blank">More info...</a>
-//               </div>
-//         });
-
-
-
-        // })
-
-
-
-
-      
-    
-
-      // if (response.data) {
-      //   return response.data.response.docs[0].headline.main;
-      // }
-      // // no results, return this string
-      // return "Nothing Found";
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//data is undefined
-
-// var { articles } = this.state;
-
-    
-
-
-
-
-        // this.state.results = resultArray; 
         
         this.setState({ results: results });
 
@@ -211,11 +139,11 @@ var Parent = React.createClass({
 
           
 
- <div className="col-md-6">
+ {/*<div className="col-md-6">
 
           <History history={this.state.history} />
 
-        </div>
+        </div>*/}
 
         <div className="col-md-6">
 
