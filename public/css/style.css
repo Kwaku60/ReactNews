@@ -112,7 +112,7 @@ color: orangered;
 
 #results-well{
 
-    border: solid midnightblue 4.25px;
+    border: solid midnightblue 5.25px;
     border-radius: 6px;
     background-color smokeWhite;
      height: 400px;
@@ -189,4 +189,34 @@ font-size: 15px;
     font-size: 8px;
     color: black;
     margin-right: 20px;
+}
+
+
+/*discussion board*/
+
+#discussion-board-header{
+
+    font-size: 20px;
+    color: mediumblue;
+}
+
+
+.quote-section{
+
+    border: solid midnightBlue 6px;
+    margin-top: 490px;
+    height: 550px;
+
+
+}
+.quotes-hold{
+
+    border: solid mediumblue 4px;
+    width: 1158px;
+    height: 540px;
+    background-color: smokewhite;
+}
+
+.quote {
+  padding-top: 20px;
 }

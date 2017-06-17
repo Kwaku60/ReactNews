@@ -2,12 +2,16 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
+var bluebird = require("bluebird");
 var mongoose = require("mongoose");
+var routes = require("./routes/routes");
+
 
 
 var History = require("./models/History");
 
-
+var PORT = process.env.PORT || 3000;
+mongoose.Promise = bluebird;
 var app = express();
 
 
@@ -21,20 +25,27 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static("./public"));
+app.use("/", routes);
+
 
 // -------------------------------------------------
 
+var db = process.env.MONGODB_URI || "mongodb://heroku_xzlhrgvc:ntpq7v6fu5sl6db8ufoj3a4csm@ds161041.mlab.com:61041/heroku_xzlhrgvc";
 
-mongoose.connect(" mongodb://heroku_xzlhrgvc:ntpq7v6fu5sl6db8ufoj3a4csm@ds161041.mlab.com:61041/heroku_xzlhrgvc");
-var db = mongoose.connection;
 
-db.on("error", function(err) {
-  console.log("Mongoose Error: ", err);
+// Connect mongoose to our database
+mongoose.connect(db, function(error) {
+  // Log any errors connecting with mongoose
+  if (error) {
+    console.error(error);
+  }
+  // Or log a success message
+  else {
+    console.log("mongoose connection is successful");
+  }
 });
 
-db.once("open", function() {
-  console.log("Mongoose connection successful.");
-});
+
 
 // -------------------------------------------------
 

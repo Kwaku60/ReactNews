@@ -6,6 +6,9 @@ var Form = require("./children/Form");
 var Results = require("./children/Results");
 var History = require("./children/History");
 var Article = require("./children/Article");
+var QuoteHome = require("./children/quoteHome");
+var API = require("./utils/helpers");
+
 // var ArticleResults = require("./utils/helpers");
 // Helper for making AJAX requests to our API
 var helpers = require("./utils/helpers");
@@ -152,6 +155,7 @@ var Parent = React.createClass({
 
         </div>
 
+    
 
 
          <div className="col-md-6">
@@ -160,6 +164,17 @@ var Parent = React.createClass({
             
 
           </div>
+
+              <div className="row quote-section">
+
+          <QuoteHome />
+
+          </div> 
+
+       
+         
+
+           
         </div>
 
 
