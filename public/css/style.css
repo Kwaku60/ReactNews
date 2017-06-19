@@ -2,12 +2,17 @@
 #body-background{
 
     background-color: white;
+    width: 100%;
+    border: solid orange 1px;
+    padding-left: 70px;
+    padding-right:0px;
+    
 }
 
 
 .border-block{
 
-    width: 1350px;
+    width: 1200px;
     height: 10px;
     background-color: cornsilk;
 
@@ -27,14 +32,14 @@
 
 .logo{
 
-    color: cornsilk
+    color: whitesmoke;
 }
 
 .header{
 
     background-color: midnightblue;
     color: orangered;
-    width: 1350px;
+    width: 1200px;
     height: 80px;
  
 
@@ -66,7 +71,8 @@
 }
 
 .search-btn{
-        color: rgba(250,69,0,.90);
+        /*color: rgba(250,69,0,.90);*/
+        color: white;
     background-color: rgba(25,25,112, .98);
     margin-top: 0px;
 }
@@ -239,6 +245,7 @@ font-size: 15px;
     border-bottom: solid midnightBlue 6px;
     margin-top: 490px;
     height: 550px;
+    width:1160px;
     border-radius: 6px;
 
 
@@ -269,6 +276,11 @@ font-size: 15px;
 #discussion-well{
 
     background-color: smokewhite;
+    width:1147px;
+  
+    margin-left:2px;
+    color: midnightblue
+
   
 }
 

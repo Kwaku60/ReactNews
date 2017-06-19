@@ -113,7 +113,7 @@ var Parent = React.createClass({
   // render 
   render: function() {
     return (
-      <div className="container">
+      <div className="container" id="body-background" >
         <div className="row">
           <div className="row header">
             <h2 className="logo">React News</h2>
