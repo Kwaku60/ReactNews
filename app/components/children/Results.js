@@ -17,7 +17,7 @@ var Results = React.createClass({
     
         <div className="panel-body text-center results" id="results-well" > 
         
-          <p className="article-hold"></p>
+          <p className="article-hold">
 
   {this.props.articles.map((article, i) => (
               <div key={i} id={"result_"+(i+1)} className="article-headline">
@@ -35,7 +35,7 @@ var Results = React.createClass({
           }
 
 
-
+</p>
  
         </div>
 

@@ -90,7 +90,7 @@ var Parent = React.createClass({
       
     }.bind(this));
   },
-  // This function allows childrens to update the parent.
+  // allows childrens to update the parent.
   setTerm: function(term) {
     this.setState({ searchTerm: term });
   },
@@ -116,7 +116,7 @@ var Parent = React.createClass({
       <div className="container">
         <div className="row">
           <div className="row header">
-            <h2>React News</h2>
+            <h2 className="logo">React News</h2>
             <p><em>Speed is on our side</em></p>
 
             <p>

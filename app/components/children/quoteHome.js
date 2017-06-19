@@ -35,12 +35,12 @@ class QuoteHome extends Component {
   render() {
     return (
       <div className="quotes-hold">
-        <div className="row">
+        <div className="row" id="submit-section" >
           <QuoteForm
             getQuotes={this.getQuotes}
           />
         </div>
-        <div className="row">
+        <div className="row"  id="discussion-well" >
           <hr />
           {this.renderQuotes()}
         </div>

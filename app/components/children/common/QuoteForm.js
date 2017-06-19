@@ -41,7 +41,7 @@ class QuoteForm extends Component {
           />
           <button
             onClick={this.handleButtonClick}
-            className="btn btn-success"
+            className="btn btn-success" id="submit-comment"
             style={styles.buttonStyle}
           >
             Submit
