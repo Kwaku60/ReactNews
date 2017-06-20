@@ -7,7 +7,7 @@ import QuoteHome from "../components/children/quoteHome";
 
 const routes = (
   <Router history={browserHistory}>
-    <Route path="/" component={Parent}>
+    <Route path="/ReactNews/" component={Parent}>
     </Route>
   </Router>
 );
