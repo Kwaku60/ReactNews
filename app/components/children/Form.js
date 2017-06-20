@@ -47,7 +47,8 @@ var Form = React.createClass({
               />
               <br />
               <button
-                className="btn search-btn"
+                className="btn"
+                id="search-btn"
                 type="submit"
               >
                 Find

@@ -117,7 +117,7 @@ var Parent = React.createClass({
         <div className="row">
           <div className="row header">
             <h2 className="logo">React News</h2>
-            <p><em>Speed is on our side</em></p>
+            <p id="sub-header"><em>Speed is on our side</em></p>
 
             <p>
               

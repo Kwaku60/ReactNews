@@ -25,7 +25,7 @@ class QuoteForm extends Component {
     return (
       <div className="col-md-6 col-md-offset-3">
         <div style={styles.formStyle} className="form-group">
-          <label htmlFor="input-box">
+          <label  id="discussion-head" htmlFor="input-box">
             Open Discussion Board 
           </label>
           <textarea

@@ -21,7 +21,7 @@ var Results = React.createClass({
 
   {this.props.articles.map((article, i) => (
               <div key={i} id={"result_"+(i+1)} className="article-headline">
-                <h2><span className="article-count">{i+1}</span> {article.headline.main}</h2>
+                <h2 id="title"><span className="article-count">{i+1}</span> {article.headline.main}</h2>
                 <p className="by-line" >{article.byline ? article.byline.original : "No Author"}</p>
      
                 <p className="publish-date" >{article.pub_date}</p>

@@ -28,11 +28,16 @@
     border-radius: 12px;
     font-size: 9px;
     color: white;
+    visibility: hidden;
 }
 
 .logo{
 
     color: whitesmoke;
+    font-size: 32px;
+       position:relative;
+       bottom:9.5px;
+  
 }
 
 .header{
@@ -41,8 +46,30 @@
     color: orangered;
     width: 1200px;
     height: 80px;
+
+
+
+    /*font-family: 'Bree Serif', serif;*/
+
+/*font-family: 'Palanquin Dark', sans-serif;*/
+
+/*font-family: 'Permanent Marker', cursive;*/
+
+/*3*/
+
+/*font-family: 'Artifika', serif;*/
  
 
+ font-family: 'Rancho', cursive;
+/*font-family: 'Gruppo', cursive;*/
+
+}
+
+#sub-header{
+
+    position: relative;
+    bottom:14px;
+    font-size:16px;
 }
 
 .click-count-div{
@@ -66,15 +93,22 @@
 
     /*color: rgba(250,69,0,.90);*/
     color: midnightblue;
-    font-size: 14px;
+    font-size: 17px;
+    font-family: 'Gruppo', cursive;
 
 }
 
-.search-btn{
+#search-btn{
         /*color: rgba(250,69,0,.90);*/
         color: white;
     background-color: rgba(25,25,112, .98);
     margin-top: 0px;
+       font-family: 'Gruppo', cursive;
+       font-size: 13px;
+       border: solid #121254 4px;
+       width:56px;
+       height: 34px;
+       padding: 2px 2px 2px 2px;
 }
 
 
@@ -192,10 +226,28 @@ color: orangered;
    
 }
 
+#title{
+
+       /*font-family: 'Gruppo', cursive;*/
+
+    /*font-family: 'Bree Serif', serif;*/
+
+/*font-family: 'Palanquin Dark', sans-serif;*/
+
+/*font-family: 'Permanent Marker', cursive;*/
+
+/*3*/
+
+font-family: 'Artifika', serif;
+font-size: 40px;
+ /*font-family: 'Rancho', cursive;*/
+
+}
+
 
 .snippit{
 
-    font-size: 12px;
+    font-size: 13px;
     color: black;
     margin-top: 0px;
 }
@@ -262,7 +314,7 @@ font-size: 15px;
 
 #submit-section{
 
-    background-color: cornsilk;
+    background-color: rgba(255, 248, 220, .5);
     width:1100px;
     margin-left: 20px;
     border-left: solid midnightblue 2px;
@@ -273,13 +325,21 @@ font-size: 15px;
     border-radius: 10px;
 }
 
+#discussion-head{
+
+font-family: 'Artifika', serif;
+
+}
+
+
 #discussion-well{
 
     background-color: smokewhite;
     width:1147px;
-  
+  font-family: 'Dosis', sans-serif;
+  font-size: 15px;
     margin-left:2px;
-    color: midnightblue
+    color: #121254;
 
   
 }
@@ -293,4 +353,6 @@ font-size: 15px;
 
     color: smokewhite;
     background-color: midnightblue;
+     font-family: 'Gruppo', cursive;
+       font-size: 13px;
 }
