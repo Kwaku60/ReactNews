@@ -10,7 +10,6 @@ var routes = require("./routes/routes");
 
 var History = require("./models/History");
 
-var PORT = process.env.PORT || 3000;
 mongoose.Promise = bluebird;
 var app = express();
 
