@@ -5,8 +5,8 @@ var React = require("react");
 var Form = require("./children/Form");
 var Results = require("./children/Results");
 var History = require("./children/History");
-var Article = require("./children/Article");
-var QuoteHome = require("./children/quoteHome");
+var Article = require("./children/article");
+var QuoteHome = require("./children/QuoteHome");
 var API = require("./utils/helpers");
 
 // var ArticleResults = require("./utils/helpers");

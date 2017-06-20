@@ -1,16 +1,15 @@
 import React from "react";
 import { Route, Router, browserHistory } from "react-router";
 
-import Parent from "../components/Parent";
+import Parent from "../components/parent";
 import QuoteHome from "../components/children/QuoteHome";
 
 
-const routes = (
- 
-    <Route path="/" component={Parent}>
-    </Route>
-    
-  
-);
+const Routes = (
+ <Router history={browserHistory}>
+    <Route path="/" component={Parent}></Route>
+    <Route path="/ReactNews/" component={Parent}></Route>
+  </Router>
+)
 
-export default routes;
+module.exports = Routes;

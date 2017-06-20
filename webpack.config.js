@@ -1,3 +1,5 @@
+var path = require("path");
+
 module.exports = {
 
   //the entry point or start of app
@@ -5,7 +7,8 @@ module.exports = {
 
   // The plain compiled JavaScript will be output into this file
   output: {
-    filename: "bundle.js"
+    path:path.resolve(__dirname,"public"),
+    filename:"bundle.js"
   },
 
   //  the transformations 
