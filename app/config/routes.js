@@ -6,10 +6,10 @@ import QuoteHome from "../components/children/quoteHome";
 
 
 const routes = (
-  <Router history={browserHistory}>
+ 
     <Route path="/ReactNews/" component={Parent}>
     </Route>
-  </Router>
+  
 );
 
 export default routes;
