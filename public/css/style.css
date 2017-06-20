@@ -12,7 +12,7 @@
 
 .border-block{
 
-    width: 1200px;
+    width: 1365px;
     height: 10px;
     background-color: cornsilk;
 
@@ -40,28 +40,73 @@
   
 }
 
+
+#side-bar{
+
+    width: 140px;
+    height:700px;
+    top:105px;
+    position: absolute;
+    bottom:5px;
+    left:1252px;
+    z-index: -20px;
+    border-radius: 8px;
+}
+
+
+.side-bar-endpoint{
+
+    background-color: cornsilk;
+    height: 182px;
+   
+}
+
+#panel-item-top{
+height: 120px;
+padding-top: 30px;
+color: Maroon;
+font-size: 27px;
+font-family: 'Gruppo', cursive;
+
+}
+.panel-item{
+
+    border: solid whitesmoke 2.5px;
+    color: orangered;
+    font-size:25px;
+    height: 150px;
+    background-color: midnightblue;
+    padding-top: 50px;
+    font-family: 'Gruppo', cursive;
+    font-weight: 6em;
+}
+
+.panel-item:hover{
+
+    border-color:mediumblue;
+}
+
+.coming-soon{
+
+    color: gold;
+    opacity: .13;
+}
+
+.coming-soon:hover{
+
+    opacity: .9;
+    color:whitesmoke;
+    z-index: 50px;
+}
+
 .header{
 
     background-color: midnightblue;
     color: orangered;
-    width: 1200px;
+    width: 1365px;
     height: 80px;
-
-
-
-    /*font-family: 'Bree Serif', serif;*/
-
-/*font-family: 'Palanquin Dark', sans-serif;*/
-
-/*font-family: 'Permanent Marker', cursive;*/
-
-/*3*/
-
-/*font-family: 'Artifika', serif;*/
- 
-
  font-family: 'Rancho', cursive;
-/*font-family: 'Gruppo', cursive;*/
+
 
 }
 

@@ -140,7 +140,28 @@ var Parent = React.createClass({
 
 <div className="row">
 
-          
+          <div id="side-bar">
+              <div className="row side-bar-endpoint" id="panel-item-top">
+                
+                <center>Explore</center></div>
+            <div className="row panel-item"><center> World</center>
+            <p className="coming-soon">coming soon</p>
+             </div>
+             <div className="row panel-item"><center> US</center>
+                 <p className="coming-soon">coming soon</p>
+                 </div>
+             
+              <div className="row panel-item"><center>Politics</center>
+                  <p className="coming-soon">coming soon</p>
+              </div>
+               <div className="row panel-item"><center>Tech</center>
+                   <p className="coming-soon">coming soon</p>
+               </div>
+                <div className="row panel-item"><center>Health</center>
+                    <p className="coming-soon">coming soon</p>
+                </div>
+                <div className="row side-bar-endpoint"></div>
+            </div> 
 
  {/*<div className="col-md-6">
 
