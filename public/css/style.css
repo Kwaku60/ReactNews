@@ -232,7 +232,7 @@ color: orangered;
 
 
 .article-hold{
-    background-color: smokewhite;
+    background-color: rgba(255, 248, 220,.2);
     overflow:scroll; 
     /*border: solid cornsilk 5.5px;*/
     border-left: solid cornsilk 6.5px;
