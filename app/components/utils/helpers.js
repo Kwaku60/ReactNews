@@ -3,8 +3,7 @@ var axios = require("axios");
 
 
 
-var authKey = "Y7rETrA3DYAQVxnVXvYE8xAbnjaL5Iz";
-
+const authKey = "Y7rETrA3DYAQVxnVXvYE8xAbnjaL5Iz";
 
 
 // Helper functions for making API Calls
@@ -14,12 +13,10 @@ var helper = {
   //this function takes the search term to find the NYT articles.
   runQuery: function(searchTerm) {
 
-    console.log(searchTerm);
      searchTerm = searchTerm.replace(/\s/g, '+');
 
 
-    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" +  authKey + "&q=" + searchTerm;
-
+    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + "&api-key="+ authKey;
     return axios.get(queryURL)
     
    
